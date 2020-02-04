@@ -1,11 +1,11 @@
 /*Debemos lograr tomar un dato por 'ID'
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
-function mostrar(dato)
+function mostrar()
 {
 	var dato;
-
-    dato = Document.getElementById('elNombre');
-
+    //sacamos el valor por ID
+    dato = document.getElementById("elNombre").value;
+    //mostrmos el alert con el dato
     alert("El dato ingresado es " + dato);
 }
 
