@@ -9,20 +9,20 @@ var resul;
 function sumar()
 {	
     num1 = document.getElementById("numeroUno").value;
-    num1 = document.getElementById("numeroDos").value;
+    num2 = document.getElementById("numeroDos").value;
 
     console.log(num1);
     console.info(num2);
 
     resul = parseInt(num1) + parseInt(num2);
 
-    alert("La resta de los nùmeros es: " + resul)
+    alert("La suma de los nùmeros es: " + resul)
 }
 
 function restar()
 {
 	num1 = document.getElementById("numeroUno").value;
-    num1 = document.getElementById("numeroDos").value;
+    num2 = document.getElementById("numeroDos").value;
 
     console.log(num1);
     console.info(num2);
@@ -35,7 +35,7 @@ function restar()
 function multiplicar()
 { 
 	num1 = document.getElementById("numeroUno").value;
-    num1 = document.getElementById("numeroDos").value;
+    num2 = document.getElementById("numeroDos").value;
 
     console.log(num1);
     console.info(num2);
@@ -48,9 +48,9 @@ function multiplicar()
 function dividir()
 {
 	num1 = document.getElementById("numeroUno").value;
-    num1 = document.getElementById("numeroDos").value;
+    num2 = document.getElementById("numeroDos").value;
 
-    console.log(num1);
+    console.log(num2);
     console.info(num2);
 if(num1 >= num2)
 {
