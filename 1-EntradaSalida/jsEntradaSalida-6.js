@@ -7,8 +7,8 @@ function sumar()
     var num2;
     var suma;
 
-    num1 = document.getElementById(numeroUno).value;
-    num2 = document.getElementById(numeroDos).value;
+    num1 = document.getElementById("numeroUno").value;
+    num2 = document.getElementById("numeroDos").value;
 
     console.info(num1);
     console.log(num2);
