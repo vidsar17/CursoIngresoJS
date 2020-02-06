@@ -6,7 +6,7 @@ function mostrar()
 	
 	numero = prompt("ingrese un número entre 0 y 9");
 
-	while(numero <= 10)
+	while(numero != 9)
 	{
 		console.log(numero);
 				 
@@ -16,7 +16,7 @@ function mostrar()
 			break;
 		}
 
-		numero++;
+		numero = prompt("Ingresó " + num + ", debe digitar un número entre 0 y 9");
 	}	
 
 }//FIN DE LA FUNCIÓN

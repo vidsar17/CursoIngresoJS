@@ -3,25 +3,22 @@ function mostrar()
 
 	var num;
 	var i;
-
-	i = 0;
+	var contador = o;
+	var acumulador = 0;
 
 	alert("Ingrese 5 números \n");
 
-	while(i >= 5)
+	i = 1;
+	while(i <= 3)
 	{		
-		num = prompt("Ingrese el número " + i+1);
-		i++;
+		num = prompt("Ingrese el número " + (i))		
+		
+		contador = contador + 1;		
+		document.getElementById('suma').value = contador;
 
-		var contador=0;
-		var acumulador=0;
+		//i++;
 	}
 
-	
-
-
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/5;
-
+		acumulador = acumulador + contador;
+		document.getElementById('promedio').value = acumulador / 3;
 }//FIN DE LA FUNCIÓN
