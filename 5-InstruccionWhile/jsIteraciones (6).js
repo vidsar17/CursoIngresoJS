@@ -1,33 +1,29 @@
 function mostrar()
 {/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio */
-
+	
 	var numero;
-	var aleatorio;
-	var random;
-	var contador;
+	var promedio;
+	var elementos;
+	var suma = 0;
 
-	contador = 0;
+	numero = prompt("Digite un número");
+	
+	while(numero >= 0)
+	{
+		suma += numero;
+		elementos++;
 
-	random = Math.round(Math.random()*10);
-	console.log(random);
+		numero = prompt("Digite un número");
+	}
 
-	do{
-		numero = prompt("Digite un número ");
-		 
-		if(numero > random)
-		{
-			prompt("Digite un número menor");
-		}
-		else
-		{
-			prompt("Digite un número mayor");
-		}
-
-		contador++;
-		
-	}while(numero != random)
-
-	alert("Adivinaste el número en : " +  contador + " intentos");
-
-		
+	if(elementos == 0)
+	{
+		alert("La división entre 0 no existe");
+	}
+	else
+	{
+		promedio = suma/elementos;
+		alert("El promedio es " + promedio);
+	}
+	
 }//FIN DE LA FUNCIÓN
