@@ -7,17 +7,35 @@ function mostrar()
 
     edad = document.getElementById("edad").value;
 
-    if(edad >= 18)
+    if(edad > 12)
     {
-        alert("La persona es mayor de edad");
+        if(edad > 18)
+        {
+            alert("Es mayor");
+        }
+        else
+        {
+            alert("Es adolente");
+        }
     }
-    else if(edad >= 13 && edad <= 17)
+    else
     {
-        alert("La persona es adolencente");
+        alert("Es menor");
     }
-    else if(edad < 13)
-    {
-        alert("La persona es niño");
-    }
+        
+    
+
+    // if(edad >= 18)
+    // {
+    //     alert("La persona es mayor de edad");
+    // }
+    // else if(edad >= 13 && edad <= 17)
+    // {
+    //     alert("La persona es adolencente");
+    // }
+    // else if(edad < 13)
+    // {
+    //     alert("La persona es niño");
+    // }
 
 }//FIN DE LA FUNCIÓN
