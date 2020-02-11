@@ -1,10 +1,24 @@
 function mostrar()
 {//Al presionar el Botón, mostrar un número Random del 1 al 10 inclusive
 	
-	var numRandom;
+	var random;
+	var max;
+	var min;
 
-	numRandom = Math.round(Math.random()*10);
+	max = 11;
+	min = 1;
 
-	alert("Número aleatorio entre 0 y 10 es: " + numRandom);	
+	random = Math.floor(Math.random() * (max - min) + min);
+
+	console.log(random);
+	alert("Número aleatorio entre 0 y 10 es: " + random);	
+
+
+	// var numRandom;
+
+	// numRandom = Math.round(Math.random()*10);
+	// console.log(numRandom);
+
+	// alert("Número aleatorio entre 0 y 10 es: " + numRandom);	
 
 }//FIN DE LA FUNCIÓN

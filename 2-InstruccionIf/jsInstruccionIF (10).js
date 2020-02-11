@@ -4,21 +4,28 @@ function mostrar()
 "APROBÓ" para notas mayores a 4,
 "Vamos, la proxima se puede" para notas menores a 4*/ 
 
-	var numRandom;
+	var random;
+	var max;
+	var min;
 
-	numRandom = Math.round(Math.random()*10);
+	max = 10;
+	min = 1;
+	//random = Math.round(Math.random()*10);
+	random = Math.floor(Math.random() * (max - min) + min);
 
-	if(numRandom == 9 || numRandom == 10)
+	console.log(random);
+
+	if(random == 9 || random == 10)
 	{
-		alert("EXCELENTE: " + numRandom);	
+		alert("EXCELENTE: " + random);	
 	}
-	else if(numRandom >= 4 && numRandom < 9)
+	else if(random >= 4 && random < 9)
 	{
-		alert("APROBÓ: " + numRandom);
+		alert("APROBÓ: " + random);
 	}
-	else if(numRandom < 4)
+	else if(random < 4)
 	{
-		alert("Vamos, la proxima se puede: " + numRandom);
+		alert("Vamos, la proxima se puede: " + random);
 	}
 
 }//FIN DE LA FUNCIÓN
