@@ -11,7 +11,7 @@ function mostrar()
     {
         alert("La persona es mayor de edad");
     }
-    else if(edad >=13 && edad <= 17)
+    else if(edad >= 13 && edad <= 17)
     {
         alert("La persona es adolencente");
     }

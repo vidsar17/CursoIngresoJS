@@ -11,11 +11,11 @@ function mostrar()
 
 	while(i <= 3)
 	{
-		parseInt(numero) = prompt("Ingrese el nùmero " + i + ":");
-		parceInt(contador)++;
-		parceint(acumulador) = contador + numero;	
+		numero = prompt("Ingrese el nùmero " + i + ":");
+		contador++;
+		acumulador = contador + numero;	
 
 		i++;
 	}
-		console.log("contador: "+ contador +" numero: "+ numero +" acumulador: "+ acumulador);
+		console.log("contador: "+ parseInt(contador) +" numero: "+ numero +" acumulador: "+ acumulador);
 }//FIN DE LA FUNCIÓN
