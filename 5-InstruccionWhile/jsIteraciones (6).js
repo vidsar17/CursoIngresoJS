@@ -2,28 +2,20 @@ function mostrar()
 {/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio */
 	
 	var numero;
+	var suma;
 	var promedio;
-	var elementos;
+	var contador;
+	var acumulador;
 	var suma = 0;
+	var i = 1;
 
-	numero = prompt("Digite un número");
-	
-	while(numero >= 0)
+	while(i <= 3)
 	{
-		suma += numero;
-		elementos++;
+		parseInt(numero) = prompt("Ingrese el nùmero " + i + ":");
+		parceInt(contador)++;
+		parceint(acumulador) = contador + numero;	
 
-		numero = prompt("Digite un número");
+		i++;
 	}
-
-	if(elementos == 0)
-	{
-		alert("La división entre 0 no existe");
-	}
-	else
-	{
-		promedio = suma/elementos;
-		alert("El promedio es " + promedio);
-	}
-	
+		console.log("contador: "+ contador +" numero: "+ numero +" acumulador: "+acumulador);
 }//FIN DE LA FUNCIÓN
