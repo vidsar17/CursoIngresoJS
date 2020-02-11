@@ -17,5 +17,5 @@ function mostrar()
 
 		i++;
 	}
-		console.log("contador: "+ contador +" numero: "+ numero +" acumulador: "+acumulador);
+		console.log("contador: "+ contador +" numero: "+ numero +" acumulador: "+ acumulador);
 }//FIN DE LA FUNCIÓN
