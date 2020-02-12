@@ -1,21 +1,31 @@
 function mostrar()
 {/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio */
-	
-	var numero;
-	var suma;
+	var num;
+	var i; // contador
+	var suma; // acumulador
 	var promedio;
-	var contador;
-	var acumulador;
-	var suma = 0;
-	var i = 1;
 
+	suma = 0;
+
+	i = 1;
 	while(i <= 3)
 	{
-		numero = prompt("Ingrese el nùmero " + i + ":");
-		contador++;
-		acumulador = contador + numero;	
+		num = prompt("Ingrese el número " + i);
+		num = parseInt(num);
 
+		console.log("número ingresado: " + num);
+
+		suma = suma + num;
+		
 		i++;
 	}
-		console.log("contador: "+ parseInt(contador) +" numero: "+ numero +" acumulador: "+ acumulador);
+		promedio = suma / 3;
+		promedio = parseFloat(promedio).toFixed(2);
+
+		document.getElementById('suma').value = suma;
+		console.log("suma: " + suma);
+
+		document.getElementById('promedio').value = promedio;		
+		console.log("promedio: " + promedio);
+
 }//FIN DE LA FUNCIÓN
