@@ -5,7 +5,9 @@ si está entre las 12 y las 19 : "Es de tarde.".
 si está entre las 20 y las 24 o entre las 0 y las 6 : "Es de noche.".
 si NO está entre las 0 y las 24 : "la hora no existe." */
 var laHora;
+
 laHora = document.getElementById('hora').value;
+laHora = parseInt(laHora);
 
 switch(laHora)
     {

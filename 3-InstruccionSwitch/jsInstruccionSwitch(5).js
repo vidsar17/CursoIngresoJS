@@ -4,6 +4,7 @@ si está entre las 7 y las 11 : "Es de mañana.". */
 var laHora;
 
 laHora = document.getElementById("hora").value;
+laHora = parseInt(laHora);
 	
     switch(laHora)
     {
