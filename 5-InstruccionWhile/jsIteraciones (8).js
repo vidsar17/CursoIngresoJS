@@ -4,7 +4,7 @@ function mostrar()
 
 	var contador = 0;
 	var positivo = 0;
-	var negativo = 1;
+	var negativo = 0;
 	var numero;
 	var respuesta='si';
 	var acumulador = 0;
@@ -15,15 +15,15 @@ function mostrar()
 
 		numero = parseInt(numero);
 
-			if(numero % 2 == 0)
+			if(numero >= 0)
 			{
 				acumulador += numero;
 				positivo = parseInt(acumulador);
 			}
 			else
-			{
+			{				
 				acumulador *= numero;
-				negativo = parseInt(acumulador);
+				negativo = parseInt(acumulador);						
 			}		
 
 		console.log("número: " + numero);
