@@ -14,22 +14,22 @@ do
 	respuesta = prompt("Si desea salir del sistema ingrese SI").toLowerCase();
 	numero = parseInt(numero);
 
-	contador += numero;
-	contador = parseInt(contador);
+	acumulador += numero;
+	acumulador = parseInt(acumulador);
 	
 	console.log("número ingresado " + numero);
 	console.log("respuesta para salir: " + respuesta);
-	console.log("contador: " + contador);	
-	console.log("acumulador: " + acumulador);
+	console.log("acumulador: " + acumulador);	
+	console.log("acumulador: " + contador);
 
-	acumulador++;
+	contador++;
 
 }while(respuesta != "si");
 
-	promedio = contador / acumulador;
+	promedio = acumulador / contador;
 	promedio = parseFloat(promedio).toFixed(2);
 
-	document.getElementById('suma').value = contador;
+	document.getElementById('suma').value = acumulador;
 	document.getElementById('promedio').value = promedio;
 
 }//FIN DE LA FUNCIÓN
