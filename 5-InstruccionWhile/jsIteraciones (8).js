@@ -2,12 +2,13 @@ function mostrar()
 {/* Al presionar el botón pedir números hasta que el usuario quiera, 
 	sumar los que son positivos y multiplicar los negativos. */
 
-	var contador = 0;
-	var positivo = 0;
-	var negativo = 0;
 	var numero;
 	var respuesta='si';
-	var acumulador = 0;
+	var acumPositivos; 
+	var acumNegativos;
+
+	acumPositivos = 0;
+	acumNegativos = 0;
 	
 	do{
 		numero = prompt("Ingrese un número");
@@ -17,25 +18,25 @@ function mostrar()
 
 			if(numero >= 0)
 			{
-				acumulador += numero;
-				positivo = parseInt(acumulador);
+				//positivo++;
+				acumPositivos += numero;
 			}
-			else
+			else if(numero < 0)
 			{				
-				acumulador *= numero;
-				negativo = parseInt(acumulador);						
+				//negativo++;		
+				acumNegativos *= numero;			
 			}		
 
 		console.log("número: " + numero);
 		console.log("respuesta " + respuesta);
-		console.log("acumulador: " + acumulador);
-		console.log("contador: " + contador);
-
-		contador++;
+		//console.log("positivos: " + positivo);
+		//console.log("negativos: " + negativo);
+		console.log("acumPositivos: "+ acumPositivos);
+		console.log("acumNegativos: " + acumNegativos);
 
 	}while(respuesta != "si")
 
-		document.getElementById("suma").value = positivo;
-		document.getElementById("producto").value = negativo;
+		document.getElementById("suma").value = acumPositivos;
+		document.getElementById("producto").value = acumNegativos	;
 
 }//FIN DE LA FUNCIÓN
