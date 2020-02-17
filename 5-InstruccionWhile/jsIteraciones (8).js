@@ -14,17 +14,17 @@ function mostrar()
 		numero = prompt("Ingrese un número");
 		respuesta = prompt("Si desea salir del programa digite 'SI'").toLowerCase();
 
-		numero = parseInt(numero);
+		numero = parseFloat(numero);
 
 			if(numero >= 0)
 			{
 				//positivo++;
 				acumPositivos += numero;
 			}
-			else if(numero < 0)
+			else //if(numero < 0)
 			{				
 				//negativo++;		
-				acumNegativos *= numero;			
+				acumNegativos += numero;			
 			}		
 
 		console.log("número: " + numero);
