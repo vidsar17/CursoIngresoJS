@@ -8,7 +8,7 @@ function mostrar()
 	suma = 0;
 
 	i = 1;
-	while(i <= 3)
+	while(i <= 5)
 	{
 		num = prompt("Ingrese el número " + i);
 		num = parseInt(num);
