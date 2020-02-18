@@ -4,7 +4,7 @@ function mostrar()
 	
 	// declarar variables
 	var numero;
-	var contador = 0;
+	var acumulador = 0;
 	var maximo = Number.MIN_VALUE;
 	var minimo = Number.MAX_VALUE;	
 	var respuesta = 'no';
@@ -14,7 +14,7 @@ function mostrar()
 		numero = parseInt(prompt("Ingrese un número"));
 		respuesta = prompt("Digite ´SI´ para finalizar").toLowerCase();
 
-		contador++;
+		acumulador += numero;
 
 		if(numero < minimo)
 		{
@@ -28,7 +28,7 @@ function mostrar()
 
 		console.log("numero: " + numero);
 		console.log("respuesta: " + respuesta);
-		console.log("contador: " + contador);	
+		console.log("acumulador: " + acumulador);	
 	}
 
 		document.getElementById('maximo').value = maximo;
