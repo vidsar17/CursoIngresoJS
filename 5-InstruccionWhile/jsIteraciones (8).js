@@ -29,7 +29,7 @@ function mostrar()
 			else //if(numero < 0)
 			{				
 				//negativo++;		
-				acumNegativos += numero;			
+				acumNegativos *= numero;			
 			}		
 
 		console.log("número: " + numero);
