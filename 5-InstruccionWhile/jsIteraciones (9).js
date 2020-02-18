@@ -5,29 +5,25 @@ function mostrar()
 	// declarar variables
 	var numero;
 	var contador = 0;
-	var maximo = 0;
-	var minimo = 0;		
+	var maximo = Number.MIN_VALUE;
+	var minimo = Number.MAX_VALUE;	
 	var respuesta = 'no';
 
 	while(respuesta != 'si')
 	{
-		numero = parseFloat(prompt("Ingrese un número"));
+		numero = parseInt(prompt("Ingrese un número"));
 		respuesta = prompt("Digite ´SI´ para finalizar").toLowerCase();
 
-		if(contador == 1)
+		contador++;
+
+		if(numero < minimo)
 		{
-			maximo = numero;
 			minimo = numero;
 		}
 
-		if(contador > 1 && numero > maximo)
+		if(numero > maximo)
 		{
-			numero = maximo;
-		}
-
-		if(contador > 1 && numero < minimo)
-		{
-			numero = minimo;
+			maximo = numero;
 		}
 
 		console.log("numero: " + numero);
