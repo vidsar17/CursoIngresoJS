@@ -13,6 +13,18 @@ function mostrar()
 		num = prompt("Ingrese el número " + i);
 		num = parseInt(num);
 
+		// while(isNaN(numero))
+		// {
+		// 	numero = prompt("Numero incorrecto");
+		// 	num = prompt("Ingrese el número " + i);
+		// }
+
+		if(isNaN(num))
+		{
+			continue;
+		}
+
+
 		console.log("número ingresado: " + num);
 
 		suma = suma + num;

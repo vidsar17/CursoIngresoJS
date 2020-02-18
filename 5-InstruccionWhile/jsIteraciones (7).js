@@ -14,6 +14,11 @@ do
 	respuesta = prompt("Si desea salir del sistema ingrese SI").toLowerCase();
 	numero = parseInt(numero);
 
+	if(isNaN(num))
+		{
+			continue;
+		}
+
 	acumulador += numero;
 	acumulador = parseInt(acumulador);
 	

@@ -16,6 +16,11 @@ function mostrar()
 
 		numero = parseFloat(numero);
 
+			if(isNaN(num))
+			{
+				continue;
+			}
+
 			if(numero >= 0)
 			{
 				//positivo++;
