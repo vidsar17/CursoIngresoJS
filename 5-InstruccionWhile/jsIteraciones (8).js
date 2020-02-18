@@ -16,7 +16,7 @@ function mostrar()
 
 		numero = parseFloat(numero);
 
-			if(isNaN(num))
+			if(isNaN(numero))
 			{
 				continue;
 			}
@@ -34,8 +34,6 @@ function mostrar()
 
 		console.log("número: " + numero);
 		console.log("respuesta " + respuesta);
-		//console.log("positivos: " + positivo);
-		//console.log("negativos: " + negativo);
 		console.log("acumPositivos: "+ acumPositivos);
 		console.log("acumNegativos: " + acumNegativos);
 
