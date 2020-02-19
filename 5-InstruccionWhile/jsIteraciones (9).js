@@ -4,31 +4,40 @@ function mostrar()
 	
 	// declarar variables
 	var numero;
-	var acumulador = 0;
-	var maximo = Number.MIN_VALUE;
-	var minimo = Number.MAX_VALUE;	
+	var maximo = 0; //Number.MIN_VALUE;
+	var minimo = 0; //Number.MAX_VALUE;	
 	var respuesta = 'no';
+	var primeraVez = true;
 
 	while(respuesta != 'si')
 	{
 		numero = parseInt(prompt("Ingrese un número"));
 		respuesta = prompt("Digite ´SI´ para finalizar").toLowerCase();
 
-		acumulador += numero;
+		if(isNaN(numero))
+			{
+				continue;
+			}
 
-		if(numero < minimo)
+		//bandera para declarar màximo y minimo
+		if (primeraVez)
 		{
-			minimo = numero;
-		}
-
-		if(numero > maximo)
-		{
+			primeraVez = false;
 			maximo = numero;
-		}
+			minimo = numero;
+		}else{
+			if(numero < minimo)
+			{
+				minimo = numero;
+			}
 
+			if(numero > maximo)
+			{
+				maximo = numero;
+			}
+		}	
 		console.log("numero: " + numero);
-		console.log("respuesta: " + respuesta);
-		console.log("acumulador: " + acumulador);	
+		console.log("respuesta: " + respuesta);			
 	}
 
 		document.getElementById('maximo').value = maximo;

@@ -37,7 +37,7 @@ function mostrar()
 		console.log("acumPositivos: "+ acumPositivos);
 		console.log("acumNegativos: " + acumNegativos);
 
-	}while(respuesta != "si")
+	}while(respuesta != "si");
 
 		document.getElementById("suma").value = acumPositivos;
 		document.getElementById("producto").value = acumNegativos	;
