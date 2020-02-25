@@ -14,21 +14,14 @@ function mostrar()
 	var contador = 0;
 	var acumulador = 0;
 	var respuesta = true;
-	var sumPositivos = 0;
-	var sumNegativos = 0;
-	var promPositivos = 0;
-	var promNegativos = 0;
-	var difnumeros;
-	var numero;
+	var negativo = 0;
+	var positivo = 0;
 	var canPositivos = 0;
 	var canNegativos = 0;
-	var promPositivos = 0;
-	var promNegativos = 0;
-	var diferencia;
-	var canCeros;
-	var canPares;
+	var canPares = 0;
+	var canCeros = 0;
 
-	while(respuesta)
+	do
 	{
 		numero = parseFloat(prompt("Ingrese un nùmero"));
 		respuesta = confirm("Desea ingresar màs nùmeros");
@@ -38,36 +31,40 @@ function mostrar()
 			continue;
 		}
 						
-		contador++;
-		acumulador += numero;
-
 		console.log("numero: " + numero);
 		console.log("contador: " + contador);
 		console.log("acumulador: " + acumulador);
 
-		//suma negativos y positivos
-		if(numero < 0)
+		if(numero % 2 == 0)
+		{ 
+			canPares++;
+		}
+		
+		if(numero > 0)
 		{
+			positivo += numero;
+			canPositivos ++;
+		}else if(numero < 0)
+		{
+			negativo += numero;
 			canNegativos++;
-			sumNegativos += numero;			
-		}
-		else
+		}else if(numero == 0)
 		{
-			canPositivos++;
-			sumPositivos += numero;
+			canCeros++;
 		}
-
 		
 	// tp hacer el ejercicio 13
-	}	 
-		console.log("positivos: " + sumPositivos);
-		console.log("negativos: " + sumNegativos);
-		console.log("canPositivos: " + canPositivos);
-		console.log("canNegativos: " + canNegativos);
-		console.log("canCeros: " + canCeros);
-		console.log("canPares: " + canPares);
-		console.log("promPositivos: " + promPositivos);
-		console.log("promNegativos: " + promNegativos);
-		console.log("diferencia: " + diferencia);
+	}while(respuesta);	 
+		
+	document.write("<p> Suma de negativos "     + negativo                + "</p>");
+	document.write("<p> Cantidad de negativos " + canNegativos           + "</p>");
+	document.write("<p> Promedio de negativos " + negativo/canNegativos  + "</p>");
+	document.write("<p> Suma de positivos "     + positivo                + "</p>");
+	document.write("<p> Cantidad de positivos " + canPositivos           + "</p>");
+	document.write("<p> Promedio de negativos " + positivo/canPositivos  + "</p>");
+	document.write("<p> Cantidad de ceros "     + canCeros               + "</p>");
+	document.write("<p> Cantidad de pares "     + canPares               + "</p>");
+	document.write("<p> Suma total "            + (positivo + negativo)   + "</p>");
+
 
 }//FIN DE LA FUNCIÓN
