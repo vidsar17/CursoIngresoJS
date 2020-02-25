@@ -1,8 +1,11 @@
 function mostrar()
 {/**al presionar el botón pedir un número. Informar si el numero es PRIMO o no. */
 
-    var n1 = prompt("Escribe un número");
+    var n1; 
     var primer = true;
+
+    n1 = prompt("Escribe un número");
+
     for (let i = 2; i < n1 / 2; i++)
     {
         if (n1 % i === 0) 
