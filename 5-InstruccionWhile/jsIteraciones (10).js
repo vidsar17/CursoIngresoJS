@@ -53,7 +53,6 @@ function mostrar()
 			canCeros++;
 		}
 		
-	// tp hacer el ejercicio 13
 	}while(respuesta);	 
 		
 	document.write("<p> Suma de negativos "     + negativo                + "</p>");
