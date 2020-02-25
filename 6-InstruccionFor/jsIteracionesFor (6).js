@@ -8,16 +8,15 @@ function mostrar()
     repetir = parseInt(prompt("Ingrese la cantidad de números"));
 
     for (let i = 1; i <= repetir; i++) {
-        numero = parseInt(prompt("Dígite un número"));
+        numero = parseInt(prompt("Dígite el número " + i + ":"));
+
         if(numero % 2 == 0)
-        {
+        {            
+            document.write("Número par ingresado: ", numero + "<br>");
             cantPares++;
-        }
-        document.write("Los números ingresados fueron ", i + "<br>");
-        document.write("La cantidad de número pares ingresados es: ". cantPares + "<br>");
+        }       
     }
 
-
-
+    document.write("La cantidad de número pares ingresados es: ", cantPares);
 
 }//FIN DE LA FUNCIÓN
