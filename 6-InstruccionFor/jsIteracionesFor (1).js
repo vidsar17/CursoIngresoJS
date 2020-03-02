@@ -4,10 +4,7 @@ function mostrar()
     numero = 10;
 
     for (let index = 1; index <= numero; index++) {
-        console.log("El número es ", index);          
-        document.write("<p> Número: " + index + "</p>");
-    }
-
-    
-    
+        console.log("El número es: ", index);          
+        document.write("<p> Número: ", index + "</p>");
+    }   
 }
