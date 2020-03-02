@@ -33,7 +33,6 @@ function NumerosPares()
     {
         contadorDePares++;
     } 
-
     while(contdor > 1)
     {
         contador--;        
@@ -51,7 +50,6 @@ function NumerosImpares()
     {
         contadorDeImpares++;
     } 
-
     while(contador > 1)
     {
         contador--;        
