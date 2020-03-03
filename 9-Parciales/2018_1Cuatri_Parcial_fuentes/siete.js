@@ -34,8 +34,7 @@ var contador = 0;
         acumuladorDeNotas += nota;
 
         console.log(nota);
-        console.log(acumuladorDeNotas);
-        alert("Las notas acumuladas son: ", acumuladorDeNotas);
+        console.log(acumuladorDeNotas);        
 
         //punto b
         if(contador == 1)
