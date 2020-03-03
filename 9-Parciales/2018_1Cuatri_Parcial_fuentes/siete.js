@@ -13,25 +13,29 @@ var contadorM = 0;
 var promedoNotas = 0;
 var acumuladorDeNotas = 0;
 var notaMinima = 0;
+var contador = 0;
 
-    while(i <= 3)
+    while(contador <= 3)
     {                    
-    i++;
+    contador++;
 
         do{
-            nota = prompt("Ingrese la nota del estudiante Nro. " + i);
+            nota = prompt("Ingrese la nota del estudiante Nro. " + contador);
             nota = parseFloat(nota);
 
         }while(isNaN(nota) ||  nota < 0 || nota > 10);
 
         do{
-            nota = prompt("Ingrese sexo");
-            nota = parseFloat(nota);
-
+            sexo = prompt("Ingrese sexo: 'f'(femenino, 'm'(masculino))").toLocaleLowerCase();
+            
         }while(sexo != "f" && sexo != "m");
 
         //punto a
-        acum += nota;
+        acumuladorDeNotas += nota;
+
+        console.log(nota);
+        console.log(acumuladorDeNotas);
+        alert("Las notas acumuladas son: ", acumuladorDeNotas);
 
         //punto b
         if(contador == 1)
