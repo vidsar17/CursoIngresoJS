@@ -49,7 +49,7 @@ var notaMaxima = 0;
         }        
 
         //punto c
-        if(sexo == "m" && nota >=6)
+        if(sexo == "m" && nota <=6)
         {
             contadorM++;
         }

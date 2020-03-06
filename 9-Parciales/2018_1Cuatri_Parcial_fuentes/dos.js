@@ -48,11 +48,11 @@ function mostrar()
       console.log("El pasaje: " + pasaje);
 
       //calculos
-      if(sexo == "m" && sexo == "Nacional")
+      if(sexo == "m" && pasaje == "Nacional")
       {
-          if(primeraVezHombreNacional)
+         primeraVezHombreNacional == true;
+          if(primeraVezHombre == false)
           {
-            primeraVezHombre = false;
             edadMinimaHombreNacional = edad;
             nombreMinimo = nombre;
           }else if(edad < edadMinimaHombreNacional)
@@ -60,9 +60,7 @@ function mostrar()
               edadMinimaHombreNacional = edad;
               nombreMinimo = nombre;
           }
-        }
-        console.log("1ra vez edad min: " + edadMinimaHombreNacional);
-        
+        }           
     
   }while(respuesta = confirm("Desea continuar?"));
 
