@@ -7,13 +7,14 @@ b) La nota más baja y el sexo de esa persona.
 c) La cantidad de varones que su nota haya sido mayor o igual a 6.*/
 
 var nota;
-var sexo;
+var sexoMinimo = 0;
 var contadorF = 0;
 var contadorM = 0;
-var promedoNotas = 0;
+var promedioNotas = 0;
 var acumuladorDeNotas = 0;
 var notaMinima = 0;
 var contador = 0;
+var notaMaxima = 0;
 
     while(contador <= 3)
     {                    
@@ -32,12 +33,11 @@ var contador = 0;
 
         //punto a
         acumuladorDeNotas += nota;
-
-        console.log(nota);
-        console.log(acumuladorDeNotas);        
+       
+        console.log("acumulador notas: " + acumuladorDeNotas);        
 
         //punto b
-        if(contador == 1)
+        if(contador == 1) //flag para guardar la primer nota
         {
             notaMinima = nota;
             sexoMinimo = sexo;
@@ -46,7 +46,7 @@ var contador = 0;
         {
             notaMinima = nota;
             sexoMinimo = sexo;
-        }
+        }        
 
         //punto c
         if(sexo == "m" && nota >=6)
@@ -54,5 +54,11 @@ var contador = 0;
             contadorM++;
         }
     }
-    promedio = acumuladorDeNotas / contador;    
+
+    //respuestas
+    promedioNotas = acumuladorDeNotas / contador; 
+            
+    console.log("promedio notas totales: " + promedioNotas); 
+    console.log("varones con nota menor a 6: " + contadorM);
+    console.log("nota minima " + notaMinima + ", y el sexo es: " + sexoMinimo);        
 }
