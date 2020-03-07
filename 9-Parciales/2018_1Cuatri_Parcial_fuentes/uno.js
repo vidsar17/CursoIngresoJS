@@ -10,7 +10,7 @@ function mostrar()
     Se debe informar al usuario lo siguiente:
     a) Del mas caro de los barbijos, la cantidad de unidades y el fabricante
     b) Del item con más unidades, el fabricante
-    C) Cuaáns unidades de jabones hay en total */
+    C) Cuantas unidades de jabones hay en total */
 
     var productos;
     var precio;
@@ -19,6 +19,11 @@ function mostrar()
     var marca;
     var fabricante;
     var flag = true;
+    var cantidadJabones = 0;
+    var menorPrecio = 0;
+    var barbijoCaro;
+    var cantidadUnidades;
+    var fabricanteBarbijo;
 
     for(let i = 0; i < numProductos; i++)
     {
@@ -41,27 +46,36 @@ function mostrar()
         do{//validación marca
             marca = prompt("Ingrese la marca del " + productos);
             
-        }while(marca == "" || ); //isNaN(marca));
+        }while(marca == "" ); //isNaN(marca));
 
         do{//validación fabricante
             fabricante = prompt("Ingrese la fabricante del " + productos);
             
         }while(fabricante == "" ); //|| isNaN(fabricante));
 
-
+        if(flag)
+        {
+            flag = false;
+            if(cantidadUnidades < cantidad)
+            {
+                cantidadUnidades = cantidad;
+                menorPrecio = precio;
+            }else if(cantidad < cantidadUnidades)
+            {   
+                cantidadUnidades = cantidad; 
+                menorPrecio = precio;  
+            }        
+        }
+        
+        console.log("cantidad unidades: " + cantidad);
+        console.log("menor precio " + menorPrecio);
         
 
         //a) Del mas caro de los barbijos, la cantidad de unidades y el fabricante           
-            if(productos == "barbijo" && cantidad )
-            {
+            // if(productos == "barbijo" && cantidad &&)
+            // {
 
-            }
-
-
-        console.log(productos);
-        console.log(precio);
-        console.log(cantidad);
-        console.log(marca);
+            // }
 
 
 
