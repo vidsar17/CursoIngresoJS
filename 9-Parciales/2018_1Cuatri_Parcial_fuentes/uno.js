@@ -15,24 +15,28 @@ function mostrar()
     var productos;
     var precio;
     var cantidad;
-    var numProductos = 2;
+    var numProductos = 5;
     var marca;
     var fabricante;
     var flag = true;
     var cantidadJabones = 0;
     var mayorPrecio = 0;
-    var barbijoCaro = 0;
-    var cantidadUnidades;
+    var cantidadMayor;
     var fabricanteBarbijo;
     var itemMasUnidadesVendidas;
     var fabricanteMasUnidadesVendidas;
-    var cantidadBarbijos = 0;
+    var mayorPrecioBarbijo;
+    var cantidadBarbijo = 0;
 
     for(let i = 0; i < numProductos; i++)
     {
 
         do{ //validación productos
             productos = prompt("Ingrese producto: \n - barbijo \n - jabón \n - alcohol");
+            if(productos == "jabón")
+            {
+                cantidadJabones++;                 
+            }
 
         }while(productos != "barbijo" && productos != "jabón" && productos != "alcohol");
 
@@ -42,7 +46,7 @@ function mostrar()
         }while(isNaN(precio) || precio < 100 || precio > 300);
 
         do{//validación cantidad
-            cantidad = parseInt(prompt("Ingrese la cantidad de " + productos +" entre 1 a 100 "));
+            cantidad = parseInt(prompt("Ingrese la cantidad de " + productos +" entre 1 a 1000 "));
 
         }while(cantidad <= 0 || isNaN(cantidad) || cantidad > 1000);
 
@@ -63,20 +67,22 @@ function mostrar()
                 mayorPrecio = precio;
                 itemMasUnidadesVendidas = productos;
                 fabricanteMasUnidadesVendidas = fabricante;
+                cantidadMayor = cantidad;
             }else if(precio > mayorPrecio)
             {
                 mayorPrecio = precio;
                 itemMasUnidadesVendidas = productos;
                 fabricanteMasUnidadesVendidas = fabricante;
+                cantidadMayor = cantidad;
             }
     
           //a) Del mas caro de los barbijos, la cantidad de unidades y el fabricante
           if(productos == "barbijo")
-          {
-              mayorPrecio = precio;            
-              fabricanteBarbijo = fabricante;
-              cantidadBarbijos = cantidad;
-              document.write("Barbijo caro es de: " + mayorPrecio + ", la cantidad de unidades es: " + cantidadUnidades + 
+          {                 
+              mayorPrecioBarbijo = mayorPrecio;
+              fabricanteBarbijo = fabricanteMasUnidadesVendidas;
+              cantidadBarbijo = cantidadMayor;
+              document.write("Barbijo caro es de: " + mayorPrecioBarbijo + ", la cantidad de unidades es: " + cantidadBarbijo + 
               " y el fabricante es: " + fabricanteBarbijo +"<br>");
           }else
           {
@@ -86,12 +92,14 @@ function mostrar()
           //C) Cuantas unidades de jabones hay en total
           if(productos == "jabón")
           {
-              cantidadJabones++;            
+            document.write("Cantidad de jabones es de: " + cantidadJabones +"<br>");       
+          }else
+          {
+              document.write("No se ingresaron jabones " + "<br>");
           }
               
 
         document.write("El ítem con más unidades vendidas es: " + itemMasUnidadesVendidas +
          " y su fabricante es: " + fabricanteMasUnidadesVendidas +"<br>");
-
-        document.write("Cantidad de jabones es de: " + cantidadJabones);
+        
 }
