@@ -7,7 +7,7 @@ a) El nombre del hombre casado más joven
 b) El sexo y nombre del pasajero/a más viejo
 c) La cantidad de mujeres que hay casadas o viudas
 d) El promedio de edad entre las mujeres
-e) El promedio de edad entre los hombres soleteros
+e) El promedio de edad entre los hombres solteros
 */
 
 var respuesta;
@@ -16,9 +16,17 @@ var edad;
 var sexo;
 var estadoCivil;
 var nombreCasadoMasJoven;
-var nombreJoven;
 var flag = true;
 var menorEdad = 0;
+var nombreViejo;
+var sexoHombreViejo;
+var flagHombreViejo = true;
+var edadHombreViejo;
+var contadorMujeres = 1;
+var promedioEdadSoltero = 0;
+var contadorHombreSoltero = 0;
+var acumuladorHombreSoltero = 0;
+
 
 alert("Bienvenido al sistema CRUCERO!!!")
 
@@ -30,7 +38,7 @@ do
     console.log(nombre);
 
     do{
-        edad = prompt("Ingrese edad de " + nombre);
+        edad = parseInt(prompt("Ingrese edad de " + nombre));
     }while(edad < 0 || edad > 120  || isNaN(edad));
     console.log(edad);
 
@@ -44,25 +52,83 @@ do
     }while(estadoCivil != 'soltero' && estadoCivil != 'casado' && estadoCivil != 'viudo' );   
     console.log(estadoCivil);
 
-}while(respuesta = confirm("Desea ingresar más personas?"));
-
     //validaciones   
     
     //a) El nombre del hombre casado más joven
     if(sexo == "m" && estadoCivil == "casado")
-   {
+    {      
         if(flag)
-        {
-            flag = false;
+        {   
+            flag = false;     
+
             menorEdad = edad;
-            nombreJoven = nombre;
-        }else if(edad < menorEdad)
+            nombreCasadoMasJoven = nombre;
+        }
+        else if(edad < menorEdad)
         {
             menorEdad = edad;
-            nombreJoven = nombre;
+            nombreCasadoMasJoven = nombre;
         }
     }
 
-    document.write("El hombre más joven es : " + nombreJoven + ", con edad de: " + menorEdad +"<br>");
+    //b) El sexo y nombre del pasajero/a más viejo
+    if(sexo == 'm' || sexo == 'f')
+    {
+        if(flagHombreViejo)
+        {
+            flagHombreViejo = false;
+
+            edadHombreViejo = edad;
+            sexoHombreViejo = sexo;
+            nombreViejo = nombre;
+        }
+        else if(edad > edadHombreViejo)
+        {
+            edadHombreViejo = edad;
+            sexoHombreViejo = sexo;
+            nombreViejo = nombre;
+        }
+    }
+
+    //c) La cantidad de mujeres que hay casadas o viuda
+    if(sexo == 'f' && (estadoCivil == 'soltero' || estadoCivil == 'viudo'))
+    {        
+        contadorMujeres++;
+    }
+
+    //e) El promedio de edad entre los hombres solteros
+    if(sexo == 'm' && estadoCivil == 'soltero')
+    {
+        contadorHombreSoltero++;
+        acumuladorHombreSoltero += edad;
+    }
+
+
+}while(respuesta = confirm("Desea ingresar más personas?"));
+
+    
+    document.write("El hombre casado más joven es: " + nombreCasadoMasJoven + ", con edad de: " + menorEdad +"<br>");
+    
+    document.write( nombreViejo + " es el pasajero/a mas viejo/a y su sexo es: " + sexoHombreViejo   
+    + ", con edad de: " + edadHombreViejo +"<br>");
+
+    if(contadorMujeres > 0)
+    {
+        document.write("Hay " + contadorMujeres + " mujeres casadas o viudas" +"<br>");
+    }
+    else
+    {
+        contadorMujeres == 1;
+    }
+    
+    if(contadorHombreSoltero > 0 )
+    {
+        promedioEdadSoltero = acumuladorHombreSoltero / contadorHombreSoltero;
+        document.write("El promedio de edad de los hombres solteros es de: " + promedioEdadSoltero);
+    }
+    else
+    {
+        contadorHombreSoltero = 0;
+    }
 
 }
