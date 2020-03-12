@@ -6,8 +6,7 @@ function mostrar()
     el tipo (validar 'barbijo', 'jabón', o 'alcohol'), 
     el precio validar entre 100 y 300, 
     la cantidad de unidades (no puede se 0 o negativo y no debe superar las 1000 unidades), 
-    la marca y el fabricante. 
-   
+    la marca y el fabricante.    
     Se debe informar al usuario lo siguiente:
     a) Del mas caro de los barbijos, la cantidad de unidades y el fabricante
     b) Del item con más unidades, el fabricante
@@ -97,7 +96,7 @@ function mostrar()
             {
                 unidadesJabon++;
             }
-
+            
     i++;
     }
         if(productos == "barbijo")
@@ -110,6 +109,6 @@ function mostrar()
 
         document.write("El ítem con más unidades vendidas es: " + itemMasUnidades + ", el fabricante es: " + fabMasUnidades + " y la cantidad de unidades vendidas es: " + cantMasUnidades + "<br>");
 
-        document.write("La cantidad de jabones ingresado es de: " + unidadesJabon + "<br>");
+        document.write("La cantidad de jabones ingresado es de: " + unidadesJabon + "<br>");       
 
 }
