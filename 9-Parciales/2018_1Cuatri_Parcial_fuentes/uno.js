@@ -54,6 +54,7 @@ function mostrar()
             marca = prompt("Ingrese la marca del " + productos + ": ").toLowerCase();
         }while(marca == "");
         console.log("marca: " + marca);
+        
             //validar fabricante
         do{
             fabricante = prompt("Ingrese el fabricante del " + productos + ": ");
